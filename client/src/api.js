@@ -2,9 +2,8 @@
 
 import axios from 'axios';
 
-// Buat instance axios
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api', 
+  baseURL: 'https://login-auth-app-javis.up.railway.app/api', 
   withCredentials: true,
 });
 
