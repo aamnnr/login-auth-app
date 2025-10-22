@@ -1,0 +1,5 @@
+# Sembunyikan file environment
+.env
+
+# Sembunyikan folder node_modules
+node_modules
