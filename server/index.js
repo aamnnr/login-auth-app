@@ -8,7 +8,9 @@ import pool from './config/database.js';
 import authRoutes from './routes/authRoutes.js';
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
+
+app.set('trust proxy', 1);
 
 // Middleware
 app.use(cors({
