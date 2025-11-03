@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import ThemeToggle from '../components/ThemeToggle';
+import { Link } from 'react-router-dom';
 
 const DashboardPage = () => {
   const { user, logout } = useAuth();
@@ -18,8 +19,12 @@ const DashboardPage = () => {
       {/* Header */}
       <header className="flex items-center justify-between bg-white px-4 py-4 shadow-md dark:bg-gray-800 md:px-10">
         <img src="/javis.png" alt="Javis Logo" className="h-auto w-[50px]" />
-
+        
         <div className="flex items-center gap-2 md:gap-4">
+          <Link to="/tasks" className="...">Tugas Saya</Link>
+          <Link to="/manage-users" className="font-medium text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+            Kelola Pengguna
+          </Link>
           <ThemeToggle />
           <button
             onClick={handleLogout}

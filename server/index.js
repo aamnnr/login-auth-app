@@ -5,7 +5,11 @@ import 'dotenv/config';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import pool from './config/database.js';
+
+// 1. Impor rute yang Anda perlukan
 import authRoutes from './routes/authRoutes.js';
+import taskRoutes from './routes/taskRoutes.js';
+import userRoutes from './routes/taskRoutes.js';
 
 const app = express();
 const PORT = process.env.PORT;
@@ -23,8 +27,9 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 
-// API routes
 app.use('/api/auth', authRoutes);
+app.use('/api/tasks', taskRoutes);
+app.use('/api/users', userRoutes);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

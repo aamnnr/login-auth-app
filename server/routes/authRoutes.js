@@ -1,5 +1,5 @@
 import express from 'express';
-// Impor controller Anda
+
 import { register, login, checkAuth, logout } from '../controllers/authController.js'; 
 import { verifyToken } from '../middleware/authMiddleware.js';
 import rateLimit from 'express-rate-limit';
